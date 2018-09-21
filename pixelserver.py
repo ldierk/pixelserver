@@ -18,9 +18,9 @@ if __name__ == "__main__":
     f.close()
 
     MyTCPHandler.message = "HTTP/1.1 200 OK\r\nContent-type: image/gif\r\nAccept-ranges: bytes\r\nContent-length: " \
-        + str(len(contents)) + "\r\n\r\n"
-	+ "Connection: close\r\n" \
-	+ str(len(contents)) + "\r\n\r\n" + contents + "\r\n\r\n"
+	+ str(len(contents)) + "\r\n\r\n"
+        + "Connection: close\r\n" \
+        + str(len(contents)) + "\r\n\r\n" + contents + "\r\n\r\n"
 
     server = SocketServer.TCPServer((HOST, PORT), MyTCPHandler)
     
